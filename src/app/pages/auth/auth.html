@@ -1,0 +1,32 @@
+<main class="body">
+    <section class="auth-container">
+       <h1>
+          {{
+            isLoginMode ? "Login" : "Register"
+          }}
+</h1>
+  
+          <form [formGroup]= "form" (ngSubmit) = "onSubmit()">
+
+                <!-- ... campos ... -->
+                 
+            <div *ngIf="!isLoginMode">
+                 <label for="name">Nome :</label>
+                 <input id="name" formControlName="name">
+            </div>
+                 <label for="email">Email :</label>
+                 <input id="email" type="email" formControlName="email">
+
+                  <label for="password"> Senha :</label>
+                 <input id="password" type="password" formControlName="password" [placeholder]="isLoginMode ? '' : 'Crie a senha com pelo menos 6 dígitos'" />
+          
+                  <button type="submit">{{isLoginMode ? 'Entrar' : 'Register'}}</button>
+        </form>
+                
+         <p>
+            {{isLoginMode ? 'Não tem conta ?' : 'Ja tem conta ?'}}
+       <button (click)="toggleMode()">{{ isLoginMode ? 'Criar conta ' : 'Fazer Login' }}</button>
+        </p>
+       
+    </section>
+</main>

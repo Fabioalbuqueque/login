@@ -1,0 +1,21 @@
+.home-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.input-text {
+  padding: 8px;
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-left: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
